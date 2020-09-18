@@ -1,0 +1,73 @@
+﻿<Window x:Class="Registro_Completo.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Registro_Completo"
+        mc:Ignorable="d"
+        Title="Registro" Height="400" Width="350">
+    <Grid>
+    <StackPanel Margin ="10,5,10,0">
+     <!--ID-->
+<StackPanel Orientation ="Horizontal" Margin ="0,5" >
+        <Label Content="ID"/>
+        <TextBox x:Name ="PersonaIdTextBox" Text ="{Binding PersonaId}" Margin="48,0" Width="75"/>
+
+        <Button x:Name="BuscarButton"  Margin="5,0" Width="75" Click="BuscarButton_Click" Content = "Buscar"/>
+        <Image Source= "/Resources/buscar.png" />
+</StackPanel>
+
+        <!--Nombre-->
+<StackPanel Orientation ="Horizontal" Margin ="0,5">
+        <Label Content="Nombre:"/> 
+        <TextBox x:Name ="NombreTextBox" Margin="10,0" Width="240" Text ="{Binding Nombre}"/>
+</StackPanel>
+
+        <!--Telefono-->
+<StackPanel Orientation ="Horizontal" Margin ="0,5">
+         <Label Content="Telefono:"/>
+        <TextBox x:Name ="TelefonoTextBox" Margin="12,0" Width="240" Text ="{Binding Telefono}"/>
+</StackPanel>
+
+        <!--Cedula-->
+<StackPanel Orientation ="Horizontal" Margin ="0,5">
+         <Label Content="Cedula:"/>
+        <TextBox x:Name ="CedulaTextBox" Margin="20,0" Width="240" Text ="{Binding Cedula}"/>
+</StackPanel>
+
+        <!--Direccion-->
+<StackPanel Orientation ="Horizontal" Margin ="0,5">
+         <Label Content="Direccion:"/>
+        <TextBox x:Name ="DireccionTextBox" Margin="10,0" Width="240" Text ="{Binding Direccion}"/>
+</StackPanel>
+
+        <!--Fecha Nacimiento-->
+
+<StackPanel Orientation ="Horizontal" Margin ="0,5">
+         <Label Content="Fecha Nacimiento:"/>
+        <DatePicker x:Name ="FechaNacimientoTextBox" Margin="10,0" Width="193" Text ="{Binding FechaNacimiento}"/>
+ </StackPanel>
+
+
+        <!--BARRA DE BOTONES-->
+
+        <StackPanel Orientation ="Horizontal" Margin ="0,15" >
+
+        <Button x:Name="NuevoButton"  Margin="10,0" Width="80"  Click="NuevoButton_Click" Content = "Nuevo" />
+        <Image Source= "/Resources/add.png" />
+        
+
+        <Button x:Name="GuardarButton"  Margin="10,0" Width="90" Click="GuardarButton_Click" Content = "Guardar"/>
+        <Image Source= "/Resources/guardar.png" />
+       
+
+        <Button x:Name="EliminarButton"  Margin="10,0" Width="90"  Click="EliminarButton_Click" Content = "Eliminar"/>
+        <Image Source= "/Resources/eliminar.png" />
+        
+       
+       
+        
+       </StackPanel>
+  </StackPanel>
+    </Grid>
+</Window>
