@@ -5,69 +5,48 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Registro_Completo"
         mc:Ignorable="d"
-        Title="Registro" Height="400" Width="350">
+        Title="Registro" Height="410" Width="444">
     <Grid>
-    <StackPanel Margin ="10,5,10,0">
-     <!--ID-->
-<StackPanel Orientation ="Horizontal" Margin ="0,5" >
-        <Label Content="ID"/>
-        <TextBox x:Name ="PersonaIdTextBox" Text ="{Binding PersonaId}" Margin="48,0" Width="75"/>
-
-        <Button x:Name="BuscarButton"  Margin="5,0" Width="75" Click="BuscarButton_Click" Content = "Buscar"/>
-        <Image Source= "/Resources/buscar.png" />
-</StackPanel>
-
-        <!--Nombre-->
-<StackPanel Orientation ="Horizontal" Margin ="0,5">
-        <Label Content="Nombre:"/> 
-        <TextBox x:Name ="NombreTextBox" Margin="10,0" Width="240" Text ="{Binding Nombre}"/>
-</StackPanel>
-
-        <!--Telefono-->
-<StackPanel Orientation ="Horizontal" Margin ="0,5">
-         <Label Content="Telefono:"/>
-        <TextBox x:Name ="TelefonoTextBox" Margin="12,0" Width="240" Text ="{Binding Telefono}"/>
-</StackPanel>
-
-        <!--Cedula-->
-<StackPanel Orientation ="Horizontal" Margin ="0,5">
-         <Label Content="Cedula:"/>
-        <TextBox x:Name ="CedulaTextBox" Margin="20,0" Width="240" Text ="{Binding Cedula}"/>
-</StackPanel>
-
-        <!--Direccion-->
-<StackPanel Orientation ="Horizontal" Margin ="0,5">
-         <Label Content="Direccion:"/>
-        <TextBox x:Name ="DireccionTextBox" Margin="10,0" Width="240" Text ="{Binding Direccion}"/>
-</StackPanel>
-
-        <!--Fecha Nacimiento-->
-
-<StackPanel Orientation ="Horizontal" Margin ="0,5">
-         <Label Content="Fecha Nacimiento:"/>
-        <DatePicker x:Name ="FechaNacimientoTextBox" Margin="10,0" Width="193" Text ="{Binding FechaNacimiento}"/>
- </StackPanel>
-
-
-        <!--BARRA DE BOTONES-->
-
-        <StackPanel Orientation ="Horizontal" Margin ="0,15" >
-
-        <Button x:Name="NuevoButton"  Margin="10,0" Width="80"  Click="NuevoButton_Click" Content = "Nuevo" />
-        <Image Source= "/Resources/add.png" />
-        
-
-        <Button x:Name="GuardarButton"  Margin="10,0" Width="90" Click="GuardarButton_Click" Content = "Guardar"/>
-        <Image Source= "/Resources/guardar.png" />
-       
-
-        <Button x:Name="EliminarButton"  Margin="10,0" Width="90"  Click="EliminarButton_Click" Content = "Eliminar"/>
-        <Image Source= "/Resources/eliminar.png" />
-        
-       
-       
-        
-       </StackPanel>
-  </StackPanel>
+        <StackPanel Margin= "-120,110,-1,-1"  VerticalAlignment="Center" HorizontalAlignment="Center">
+            <!--ID-->
+            <Label Content = "ID" FontWeight="Bold" FontSize="15px" Margin="130,-125,1,1" FontFamily="SimSun-ExtB" FontStyle="Normal"/>
+            <TextBox x:Name = "PersonaIdTextBox" Text ="{Binding PersonaId}" Width="50" Height="25" Margin="10,-225,0,0"/>
+            
+            <!--Boton Buscar-->
+            <Button x:Name ="BuscarButton" Margin="240,-225,0,0" Width = "100" Height = "40" Content="   Buscar" Click="BuscarButton_Click" />
+            <Image Source= "/buscar.png" Width="30" Height= "30" Margin="180,-225,0,0"/>
+ 
+            <!--Nombre-->
+            <Label Content = "Nombre" FontWeight="Bold" FontSize="15px" Margin="110,-90,1,1" FontFamily="SimSun-ExtB" FontStyle="Normal"/>
+            <TextBox x:Name = "NombreTextBox" Text ="{Binding Nombre}" Width="190" Height="25" Margin="150,-140,0,0"/>
+ 
+            <!--Telefono-->
+            <Label Content = "Telefono" FontWeight="Bold" FontSize="15px" Margin="110,-50,1,1" FontFamily="SimSun-ExtB" FontStyle="Normal"/>
+            <TextBox x:Name = "TelefonoTextBox" Text ="{Binding Telefono}" Width="190" Height="25" Margin="150,-60,0,0"/>
+ 
+            <!--Cedula-->
+            <Label Content = "Cedula" FontWeight="Bold" FontSize="15px" Margin="110,-10,1,1" FontFamily="SimSun-ExtB" FontStyle="Normal"/>
+            <TextBox x:Name = "CedulaTextBox" Text ="{Binding Cedula}" Width="190" Height="25" Margin="150,-30,0,0"/>
+ 
+            <!--Direccion-->
+            <Label Content = "Direccion" FontWeight="Bold" FontSize="15px" Margin="110,10,1,1" FontFamily="SimSun-ExtB" FontStyle="Normal"/>
+            <TextBox x:Name = "DireccionTextBox" Text ="{Binding Direccion}" Width="190" Height="27" Margin="150,-40,0,0"/>
+ 
+            <!--Fecha de Nacimiento-->
+            <Label Content = "Fecha Nacimiento" FontWeight="Bold" FontSize="13.5px" Margin="110,10,1,1" FontFamily="SimSun-ExtB" FontStyle="Normal"/>
+            <DatePicker x:Name = "FechaNacimientoDatePicker" Text ="{Binding FechaNacimiento}" Width="190" Height="35" Margin="150,-30,0,0"/>
+ 
+            <!-- Barra de Botones-->
+            <Button x:Name ="NuevoButton" Margin="-120,20,0,0" Width = "100" Height = "40" Content="Nuevo" Click="NuevoButton_Click"/>
+            <Image Source= "/nuevo.png" Width="20" Height= "20" Margin="-180,-40,0,0"/>
+ 
+            
+            <Button x:Name ="GuardarButton" Margin="140,-40,0,0" Width = "100" Height = "40" Content= "Guardar" Click="GuardarButton_Click"/>
+            <Image Source= "/guardar.png" Width="20" Height= "20" Margin="80,-40,0,0"/>
+ 
+            
+            <Button x:Name ="EliminarButton" Margin="390,-40,0,0" Width = "100" Height = "40" Content="   Eliminar" Click="EliminarButton_Click"/>
+            <Image Source= "/eliminar.png" Width="20" Height= "20" Margin="330,-40,0,0"/>
+        </StackPanel>
     </Grid>
 </Window>

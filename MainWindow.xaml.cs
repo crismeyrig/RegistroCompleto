@@ -38,10 +38,10 @@ namespace Registro_Completo
              if (paso)
              {
                  Limpiar();
-                 MessageBox.Show("Transaciones exitosa","exito", MessageBoxButton.OK,MessageBoxImage.Information);
+                 MessageBox.Show("Transacion  Exitosa","Exito", MessageBoxButton.OK,MessageBoxImage.Information);
              }
              else
-             MessageBox.Show("Transaciones fallida","fallo",MessageBoxButton.OK, MessageBoxImage.Error);
+             MessageBox.Show("Transacio Fallida","Fallo",MessageBoxButton.OK, MessageBoxImage.Error);
         }
     private void  Limpiar()
     {
@@ -51,16 +51,22 @@ namespace Registro_Completo
     
     private void BuscarButton_Click(object sender, RoutedEventArgs e)
     {
-        var persona = PersonasBLL.Buscar(/*int.Parse(PersonaIdTextBox.Text)*/1);
+        var persona = PersonasBLL.Buscar(Utilidades.ToInt(PersonaIdTextBox.Text));
         if (persona != null)
-        this.Persona = persona;
+        {
+            this.Persona = persona;
+        }
+        
         else
+        {
+        this.Persona = new Personas(); 
+        }
+        
         this.DataContext = this.Persona;
     }
-    
     private void EliminarButton_Click(object sender, RoutedEventArgs e)
     {
-        if (PersonasBLL.Eliminar(/*int.Parse(PersonaIdTextBox.Text)*/1))
+        if (PersonasBLL.Eliminar(Utilidades.ToInt(PersonaIdTextBox.Text)))
         {
             Limpiar();
             MessageBox.Show("Registro eliminado!","Exito", MessageBoxButton.OK, MessageBoxImage.Information);

@@ -15,4 +15,17 @@
     </PackageReference>
   </ItemGroup>
 
+<ItemGroup>
+  <None Remove="nuevo.png" />
+  <None Remove="guardar.png" />
+  <None Remove="eliminar.png" /> 
+  <None Remove="buscar.png" />
+</ItemGroup>
+
+<ItemGroup> 
+    <Resource Include="eliminar.png" />
+    <Resource Include="guardar.png" /> 
+    <Resource Include="nuevo.png" /> 
+    <Resource Include="buscar.png" />
+</ItemGroup>
 </Project>
